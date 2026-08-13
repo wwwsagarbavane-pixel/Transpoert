@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #F4F7FB;
+  --color-card: #FFFFFF;
+  --color-sidebar: #111827;
+  --color-primary: #4F46E5;
+  --color-primary-dark: #4338CA;
+  --color-secondary: #2563EB;
+  --color-success: #16A34A;
+  --color-warning: #F59E0B;
+  --color-danger: #DC2626;
+  --color-text: #111827;
+  --color-subtext: #6B7280;
+  --color-border: rgba(15,23,42,0.08);
+
+  --font-sans: 'Inter', 'DM Sans', system-ui, sans-serif;
+  --font-display: 'DM Sans', 'Inter', system-ui, sans-serif;
+  --radius-card: 20px;
+  --radius-btn: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Scrollbars override */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.08);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.25);
+}
+
+/* Custom premium scrollbar system with auto-hide hover effects */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: scrollbar-color 0.3s;
+}
+
+.custom-scrollbar:hover {
+  scrollbar-color: rgba(99, 102, 241, 0.25) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 99px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.18);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.38) !important;
+}
+
+/* A4 Print Optimization */
+@media print {
+  /* Hide all elements by default */
+  body * {
+    visibility: hidden !important;
+    background: none !important;
+  }
+  /* Show only the printable document card */
+  .printable-area, .printable-area * {
+    visibility: visible !important;
+  }
+  .printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 210mm !important;
+    height: 148mm !important; /* A5 landscape or fit to A4 */
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: 1px solid #1e3a8a !important;
+    padding: 12px !important;
+    margin: 0 !important;
+    background-color: white !important;
+    color: #1e3a8a !important;
+  }
+  @page {
+    size: landscape;
+    margin: 5mm;
+  }
+}
+
+/* Custom utility classes */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(15,23,42,0.06), 0 4px 16px rgba(15,23,42,0.06), 0 0 0 1px rgba(15,23,42,0.06);
+}
+
+.card-shadow-hover {
+  box-shadow: 0 4px 12px rgba(15,23,42,0.10), 0 16px 40px rgba(15,23,42,0.10), 0 0 0 1px rgba(15,23,42,0.06);
+}
+
+.sidebar-glow {
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08), 0 0 16px rgba(79,70,229,0.35);
+}
+
+/* Premium Typography System Overrides */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Premium Table Spacings & Typography */
+table th {
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #4B5563 !important; /* gray-600 */
+}
+
+table tr {
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+table tbody tr:hover {
+  background-color: rgba(79, 70, 229, 0.02) !important;
+}
+
+table tbody tr:active {
+  background-color: rgba(79, 70, 229, 0.04) !important;
+}
+
+/* Form inputs premium focus states */
+input:focus, select:focus, textarea:focus {
+  border-color: #6366F1 !important; /* Indigo-500 */
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12) !important;
+  background-color: white !important;
+}
+
+/* Icon normalizer helper alignments */
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
