@@ -1,0 +1,93 @@
+{
+  "companies": [
+    {
+      "id": "COMP-DEMO-001",
+      "code": "DEMO",
+      "name": "Demo Transport",
+      "schema_name": "demo_transport",
+      "status": "active"
+    },
+    {
+      "id": "COMP-003",
+      "code": "TESTTR",
+      "name": "TestTranpoart",
+      "city": "Pune",
+      "status": "active",
+      "lastLogin": "2026-08-11T11:30:04.300Z",
+      "createdAt": "2026-08-11T11:30:04.300Z",
+      "updatedAt": "2026-08-11T11:30:04.300Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "USR-SUPERADMIN-001",
+      "name": "Super Admin",
+      "email": "Admin@gmail.com",
+      "role": "SUPER_ADMIN",
+      "status": "active"
+    },
+    {
+      "id": "USR-DEMOADMIN-001",
+      "company_id": "COMP-DEMO-001",
+      "name": "Demo Transport Admin",
+      "email": "demo@gmail.com",
+      "role": "Company Admin",
+      "status": "active"
+    },
+    {
+      "id": "USR-COMPANY-TEST",
+      "company_id": "COMP-001",
+      "name": "Normal Company User",
+      "username": "test1",
+      "email": "test1@gmail.com",
+      "password": "text@123",
+      "role": "Company User",
+      "assignedCompanies": [
+        "COMP-001"
+      ],
+      "permissions": [
+        "lr.read",
+        "lr.create",
+        "billing.read"
+      ],
+      "branch": "Main HQ",
+      "lastLogin": "2026-08-11T11:30:04.301Z",
+      "status": "active",
+      "createdAt": "2026-08-11T11:30:04.301Z",
+      "updatedAt": "2026-08-11T11:30:04.301Z"
+    },
+    {
+      "id": "USR-TEST-TRANPOART",
+      "company_id": "COMP-003",
+      "name": "TestTranpoart Admin",
+      "username": "test",
+      "email": "Test@gmail.com",
+      "password": "Test@123",
+      "role": "Company Admin",
+      "assignedCompanies": [
+        "COMP-003"
+      ],
+      "permissions": [
+        "*"
+      ],
+      "branch": "Main HQ",
+      "lastLogin": "2026-08-11T11:30:04.301Z",
+      "status": "active",
+      "createdAt": "2026-08-11T11:30:04.301Z",
+      "updatedAt": "2026-08-11T11:30:04.301Z"
+    }
+  ],
+  "parties": [],
+  "vehicles": [],
+  "drivers": [],
+  "owners": [],
+  "agents": [],
+  "stations": [],
+  "articles": [],
+  "branches": [],
+  "lrs": [],
+  "bills": [],
+  "payments": [],
+  "deliveries": [],
+  "audit_logs": []
+}
