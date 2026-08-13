@@ -1,0 +1,501 @@
+{
+  "companies": [
+    {
+      "id": "COMP-001",
+      "code": "DUMMY",
+      "name": "Dummy Transport Pvt Ltd",
+      "status": "active",
+      "lastLogin": "2026-08-06T08:37:34.656Z",
+      "createdAt": "2026-08-06T08:37:34.656Z",
+      "updatedAt": "2026-08-06T08:37:34.656Z"
+    },
+    {
+      "id": "COMP-002",
+      "code": "GANESH",
+      "name": "Ganesh Transport",
+      "status": "active",
+      "lastLogin": "2026-08-06T08:37:34.656Z",
+      "createdAt": "2026-08-06T08:37:34.656Z",
+      "updatedAt": "2026-08-06T09:27:00.951Z"
+    },
+    {
+      "id": "COMP-1786008245979",
+      "code": "GG",
+      "name": "Ganesh Transport",
+      "status": "active",
+      "lastLogin": "2026-08-06T09:24:05.979Z",
+      "createdAt": "2026-08-06T09:24:05.980Z",
+      "updatedAt": "2026-08-06T09:24:05.980Z"
+    },
+    {
+      "id": "COMP-378532",
+      "code": "GH",
+      "name": "Ganesh Tranpoart 2",
+      "status": "active",
+      "lastLogin": "2026-08-06T09:42:58.532Z",
+      "createdAt": "2026-08-06T09:42:58.533Z",
+      "updatedAt": "2026-08-06T09:42:58.533Z"
+    }
+  ],
+  "parties": [],
+  "vehicles": [
+    {
+      "number": "MH 2255",
+      "type": "Trailer",
+      "capacity": "18T",
+      "owner": "In-house Fleet",
+      "driver": "Unassigned",
+      "status": "active",
+      "id": "VEH-1786005541898",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:39:01.901Z",
+      "updatedAt": "2026-08-06T08:39:01.901Z"
+    }
+  ],
+  "drivers": [
+    {
+      "name": "ganesh ",
+      "mobile": "8237211681",
+      "license": "LIC-990011",
+      "licenseExpiry": "2029-12-31",
+      "status": "active",
+      "id": "DRV-1786005568598",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:39:28.909Z",
+      "updatedAt": "2026-08-06T08:39:28.909Z"
+    },
+    {
+      "name": "ganesh",
+      "mobile": "8237211681",
+      "license": "LIC-990011",
+      "licenseExpiry": "2029-12-31",
+      "status": "active",
+      "id": "DRV-1786005630000",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:40:30.313Z",
+      "updatedAt": "2026-08-06T08:40:30.313Z"
+    },
+    {
+      "name": "sfdf",
+      "mobile": "8237211681",
+      "license": "LIC-990011",
+      "licenseExpiry": "2029-12-31",
+      "status": "active",
+      "id": "DRV-1786005981069",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:46:21.070Z",
+      "updatedAt": "2026-08-06T08:46:21.070Z"
+    },
+    {
+      "name": "Harish ",
+      "mobile": "5452545",
+      "license": "LIC-990011",
+      "licenseExpiry": "2029-12-31",
+      "status": "active",
+      "id": "DRV-1786006172806",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:49:32.812Z",
+      "updatedAt": "2026-08-06T08:49:32.812Z"
+    },
+    {
+      "name": "sai ",
+      "mobile": "851521251515",
+      "license": "LIC-990011",
+      "licenseExpiry": "2029-12-31",
+      "status": "active",
+      "id": "DRV-1786006204357",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:50:04.675Z",
+      "updatedAt": "2026-08-06T08:50:04.675Z"
+    },
+    {
+      "name": "krishna ",
+      "mobile": "2584455",
+      "license": "LIC-990011",
+      "licenseExpiry": "2029-12-31",
+      "status": "active",
+      "id": "DRV-1786006296304",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:51:36.611Z",
+      "updatedAt": "2026-08-06T08:51:36.611Z"
+    },
+    {
+      "name": "raghu",
+      "mobile": "8575822412",
+      "license": "LIC-990011",
+      "licenseExpiry": "2029-12-31",
+      "status": "active",
+      "id": "DRV-1786006316445",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:51:56.751Z",
+      "updatedAt": "2026-08-06T08:51:56.751Z"
+    }
+  ],
+  "owners": [
+    {
+      "name": "Ganesh PVT",
+      "contact": "Ganesh PVT",
+      "mobile": "855425822",
+      "gst": "845DFDFF",
+      "vehicles": 1,
+      "status": "active",
+      "id": "OWN-1786006555349",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:55:55.350Z",
+      "updatedAt": "2026-08-06T08:55:55.350Z"
+    },
+    {
+      "name": "ganesh",
+      "contact": "ganesh",
+      "mobile": "bawane ",
+      "gst": "8454555",
+      "vehicles": 1,
+      "status": "active",
+      "id": "OWN-1786006803344",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T09:00:03.655Z",
+      "updatedAt": "2026-08-06T09:00:03.655Z"
+    }
+  ],
+  "agents": [],
+  "stations": [
+    {
+      "id": "STN-COMP-002-HO",
+      "company_id": "COMP-002",
+      "name": "Pune Head Office",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "type": "Branch",
+      "status": "active",
+      "createdAt": "2026-08-06T08:37:34.656Z",
+      "updatedAt": "2026-08-06T08:37:34.656Z"
+    },
+    {
+      "name": "ganesh",
+      "city": "pune",
+      "state": "mahartstea",
+      "type": "Branch",
+      "status": "active",
+      "id": "STN-1786005649028",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:40:49.033Z",
+      "updatedAt": "2026-08-06T08:40:49.033Z"
+    },
+    {
+      "name": "ABD",
+      "city": "adilabd",
+      "state": "mahastar",
+      "type": "Branch",
+      "status": "active",
+      "id": "STN-1786006010157",
+      "company_id": "COMP-002",
+      "createdAt": "2026-08-06T08:46:50.470Z",
+      "updatedAt": "2026-08-06T08:46:50.470Z"
+    },
+    {
+      "id": "STN-COMP-378532-HO",
+      "company_id": "COMP-378532",
+      "name": "Mumbai Head Office",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "type": "Branch",
+      "status": "active",
+      "createdAt": "2026-08-06T09:42:58.549Z",
+      "updatedAt": "2026-08-06T09:42:58.549Z"
+    }
+  ],
+  "articles": [],
+  "lrs": [],
+  "deliveries": [],
+  "bills": [],
+  "payments": [],
+  "users": [
+    {
+      "id": "USR-001",
+      "company_id": "COMP-001",
+      "name": "Ganesh Bawane",
+      "email": "admin@transportos.com",
+      "role": "Admin",
+      "branch": "Mumbai HQ",
+      "lastLogin": "2026-08-06T08:47:55.749Z",
+      "status": "active",
+      "createdAt": "2026-08-06T08:37:34.656Z",
+      "updatedAt": "2026-08-06T08:47:55.749Z"
+    },
+    {
+      "id": "USR-SUPER-ADMIN",
+      "name": "Super Admin",
+      "email": "demo@gmail.com",
+      "password": "Test@123",
+      "role": "Super Admin",
+      "assignedCompanies": [
+        "*"
+      ],
+      "permissions": [
+        "*"
+      ],
+      "branch": "System HQ",
+      "lastLogin": "2026-08-06T09:08:50.875Z",
+      "status": "active",
+      "createdAt": "2026-08-06T09:08:50.875Z",
+      "updatedAt": "2026-08-06T09:08:50.875Z"
+    },
+    {
+      "id": "USR-COMPANY-TEST",
+      "company_id": "COMP-001",
+      "name": "Test Company User",
+      "email": "test@gmail.com",
+      "password": "text@123",
+      "role": "Company User",
+      "assignedCompanies": [
+        "COMP-001"
+      ],
+      "permissions": [
+        "lr.read",
+        "lr.create",
+        "billing.read"
+      ],
+      "branch": "Mumbai HQ",
+      "lastLogin": "2026-08-06T09:08:50.875Z",
+      "status": "active",
+      "createdAt": "2026-08-06T09:08:50.875Z",
+      "updatedAt": "2026-08-06T09:08:50.875Z"
+    },
+    {
+      "id": "USR-1786009378555",
+      "company_id": "COMP-378532",
+      "name": "Ganesh",
+      "email": "gbtreandz@gmail.com",
+      "password": "Test@123",
+      "role": "Company Admin",
+      "assignedCompanies": [
+        "COMP-378532"
+      ],
+      "permissions": [
+        "*"
+      ],
+      "branch": "Mumbai Head Office",
+      "lastLogin": "2026-08-06T09:42:58.555Z",
+      "status": "active",
+      "createdAt": "2026-08-06T09:42:58.555Z",
+      "updatedAt": "2026-08-06T09:42:58.555Z"
+    },
+    {
+      "id": "USR-1786010326185",
+      "company_id": "COMP-378532",
+      "name": "GB Treandz",
+      "username": "ggg",
+      "email": "gb@gmail.com",
+      "mobile": "8237211681",
+      "password": "Test@123",
+      "role": "Operator",
+      "branch": "Mumbai HQ",
+      "department": "Operations",
+      "designation": "Operator",
+      "assignedCompanies": [
+        "COMP-378532"
+      ],
+      "permissions": [
+        "*"
+      ],
+      "lastLogin": "Never",
+      "status": "active",
+      "createdAt": "2026-08-06T09:58:46.186Z",
+      "updatedAt": "2026-08-06T09:58:46.186Z"
+    }
+  ],
+  "company_setup": [
+    {
+      "id": "COMP-001",
+      "company_id": "COMP-001",
+      "companyName": "Dummy Transport Pvt Ltd",
+      "tagline": "Demo & Training Environment",
+      "gstin": "27AABCD1234A1Z5",
+      "pan": "AABCD1234A",
+      "email": "demo@dummytransport.com",
+      "phone": "022-41234567",
+      "address": "Plot 101, Demo Industrial Estate",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "bankName": "HDFC Bank",
+      "accountNo": "50200012345678",
+      "ifsc": "HDFC0001234",
+      "termsAndConditions": "Demo Company Terms & Conditions.",
+      "updatedAt": "2026-08-06T08:37:34.656Z"
+    },
+    {
+      "id": "COMP-002",
+      "company_id": "COMP-002",
+      "companyName": "Ganesh Transport",
+      "tagline": "Production Testing & Operations",
+      "gstin": "27AABCG5678B1Z9",
+      "pan": "AABCG5678B",
+      "email": "ganesh@ganeshtransport.in",
+      "phone": "022-98765432",
+      "address": "HQ Suite 4, Logistics Park",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001",
+      "bankName": "ICICI Bank",
+      "accountNo": "60300098765432",
+      "ifsc": "ICIC0005678",
+      "termsAndConditions": "Goods carried at owner's risk.",
+      "updatedAt": "2026-08-06T08:37:34.656Z"
+    },
+    {
+      "id": "COMP-378532",
+      "company_id": "COMP-378532",
+      "companyName": "Ganesh Tranpoart 2",
+      "tagline": "Enterprise Transport Operations",
+      "gstin": "27AABCD1234A1Z5",
+      "pan": "AABCD1234A",
+      "email": "gbtreandz@gmail.com",
+      "phone": "8237211681",
+      "address": "adilabd",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001",
+      "bankName": "HDFC Bank",
+      "accountNo": "50200012345678",
+      "ifsc": "HDFC0001234",
+      "termsAndConditions": "Goods carried at owner's risk.",
+      "updatedAt": "2026-08-06T09:42:58.540Z",
+      "createdAt": "2026-08-06T09:42:58.540Z"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": "LOG-1786005541914-unyx",
+      "company_id": "COMP-002",
+      "entity": "Vehicle",
+      "action": "CREATE",
+      "entityId": "VEH-1786005541898",
+      "payload": "{\"number\":\"MH 2255\",\"type\":\"Trailer\",\"capacity\":\"18T\",\"owner\":\"In-house Fleet\",\"driver\":\"Unassigned\",\"status\":\"active\",\"id\":\"VEH-1786005541898\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:39:01.898Z\",\"updatedAt\":\"2026-08-06T08:39:01.898Z\"}",
+      "timestamp": "2026-08-06T08:39:01.914Z",
+      "createdAt": "2026-08-06T08:39:01.916Z",
+      "updatedAt": "2026-08-06T08:39:01.916Z"
+    },
+    {
+      "id": "LOG-1786005568912-i5pt",
+      "company_id": "COMP-002",
+      "entity": "Driver",
+      "action": "CREATE",
+      "entityId": "DRV-1786005568598",
+      "payload": "{\"name\":\"ganesh \",\"mobile\":\"8237211681\",\"license\":\"LIC-990011\",\"licenseExpiry\":\"2029-12-31\",\"status\":\"active\",\"id\":\"DRV-1786005568598\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:39:28.598Z\",\"updatedAt\":\"2026-08-06T08:39:28.598Z\"}",
+      "timestamp": "2026-08-06T08:39:28.912Z",
+      "createdAt": "2026-08-06T08:39:28.914Z",
+      "updatedAt": "2026-08-06T08:39:28.914Z"
+    },
+    {
+      "id": "LOG-1786005630316-bbio",
+      "company_id": "COMP-002",
+      "entity": "Driver",
+      "action": "CREATE",
+      "entityId": "DRV-1786005630000",
+      "payload": "{\"name\":\"ganesh\",\"mobile\":\"8237211681\",\"license\":\"LIC-990011\",\"licenseExpiry\":\"2029-12-31\",\"status\":\"active\",\"id\":\"DRV-1786005630000\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:40:30.000Z\",\"updatedAt\":\"2026-08-06T08:40:30.000Z\"}",
+      "timestamp": "2026-08-06T08:40:30.316Z",
+      "createdAt": "2026-08-06T08:40:30.318Z",
+      "updatedAt": "2026-08-06T08:40:30.318Z"
+    },
+    {
+      "id": "LOG-1786005649043-4urt",
+      "company_id": "COMP-002",
+      "entity": "Station",
+      "action": "CREATE",
+      "entityId": "STN-1786005649028",
+      "payload": "{\"name\":\"ganesh\",\"city\":\"pune\",\"state\":\"mahartstea\",\"type\":\"Branch\",\"status\":\"active\",\"id\":\"STN-1786005649028\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:40:49.028Z\",\"updatedAt\":\"2026-08-06T08:40:49.028Z\"}",
+      "timestamp": "2026-08-06T08:40:49.043Z",
+      "createdAt": "2026-08-06T08:40:49.045Z",
+      "updatedAt": "2026-08-06T08:40:49.045Z"
+    },
+    {
+      "id": "LOG-1786005981087-vand",
+      "company_id": "COMP-002",
+      "entity": "Driver",
+      "action": "CREATE",
+      "entityId": "DRV-1786005981069",
+      "payload": "{\"name\":\"sfdf\",\"mobile\":\"8237211681\",\"license\":\"LIC-990011\",\"licenseExpiry\":\"2029-12-31\",\"status\":\"active\",\"id\":\"DRV-1786005981069\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:46:21.069Z\",\"updatedAt\":\"2026-08-06T08:46:21.069Z\"}",
+      "timestamp": "2026-08-06T08:46:21.087Z",
+      "createdAt": "2026-08-06T08:46:21.091Z",
+      "updatedAt": "2026-08-06T08:46:21.091Z"
+    },
+    {
+      "id": "LOG-1786006010474-1a8o",
+      "company_id": "COMP-002",
+      "entity": "Station",
+      "action": "CREATE",
+      "entityId": "STN-1786006010157",
+      "payload": "{\"name\":\"ABD\",\"city\":\"adilabd\",\"state\":\"mahastar\",\"type\":\"Branch\",\"status\":\"active\",\"id\":\"STN-1786006010157\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:46:50.157Z\",\"updatedAt\":\"2026-08-06T08:46:50.157Z\"}",
+      "timestamp": "2026-08-06T08:46:50.474Z",
+      "createdAt": "2026-08-06T08:46:50.475Z",
+      "updatedAt": "2026-08-06T08:46:50.475Z"
+    },
+    {
+      "id": "LOG-1786006172820-pu62",
+      "company_id": "COMP-002",
+      "entity": "Driver",
+      "action": "CREATE",
+      "entityId": "DRV-1786006172806",
+      "payload": "{\"name\":\"Harish \",\"mobile\":\"5452545\",\"license\":\"LIC-990011\",\"licenseExpiry\":\"2029-12-31\",\"status\":\"active\",\"id\":\"DRV-1786006172806\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:49:32.806Z\",\"updatedAt\":\"2026-08-06T08:49:32.806Z\"}",
+      "timestamp": "2026-08-06T08:49:32.820Z",
+      "createdAt": "2026-08-06T08:49:32.822Z",
+      "updatedAt": "2026-08-06T08:49:32.822Z"
+    },
+    {
+      "id": "LOG-1786006204679-x86l",
+      "company_id": "COMP-002",
+      "entity": "Driver",
+      "action": "CREATE",
+      "entityId": "DRV-1786006204357",
+      "payload": "{\"name\":\"sai \",\"mobile\":\"851521251515\",\"license\":\"LIC-990011\",\"licenseExpiry\":\"2029-12-31\",\"status\":\"active\",\"id\":\"DRV-1786006204357\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:50:04.357Z\",\"updatedAt\":\"2026-08-06T08:50:04.357Z\"}",
+      "timestamp": "2026-08-06T08:50:04.679Z",
+      "createdAt": "2026-08-06T08:50:04.679Z",
+      "updatedAt": "2026-08-06T08:50:04.679Z"
+    },
+    {
+      "id": "LOG-1786006296619-vfgp",
+      "company_id": "COMP-002",
+      "entity": "Driver",
+      "action": "CREATE",
+      "entityId": "DRV-1786006296304",
+      "payload": "{\"name\":\"krishna \",\"mobile\":\"2584455\",\"license\":\"LIC-990011\",\"licenseExpiry\":\"2029-12-31\",\"status\":\"active\",\"id\":\"DRV-1786006296304\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:51:36.304Z\",\"updatedAt\":\"2026-08-06T08:51:36.304Z\"}",
+      "timestamp": "2026-08-06T08:51:36.619Z",
+      "createdAt": "2026-08-06T08:51:36.623Z",
+      "updatedAt": "2026-08-06T08:51:36.623Z"
+    },
+    {
+      "id": "LOG-1786006316760-rgms",
+      "company_id": "COMP-002",
+      "entity": "Driver",
+      "action": "CREATE",
+      "entityId": "DRV-1786006316445",
+      "payload": "{\"name\":\"raghu\",\"mobile\":\"8575822412\",\"license\":\"LIC-990011\",\"licenseExpiry\":\"2029-12-31\",\"status\":\"active\",\"id\":\"DRV-1786006316445\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:51:56.445Z\",\"updatedAt\":\"2026-08-06T08:51:56.445Z\"}",
+      "timestamp": "2026-08-06T08:51:56.760Z",
+      "createdAt": "2026-08-06T08:51:56.764Z",
+      "updatedAt": "2026-08-06T08:51:56.765Z"
+    },
+    {
+      "id": "LOG-1786006555359-ej7b",
+      "company_id": "COMP-002",
+      "entity": "Owner",
+      "action": "CREATE",
+      "entityId": "OWN-1786006555349",
+      "payload": "{\"name\":\"Ganesh PVT\",\"contact\":\"Ganesh PVT\",\"mobile\":\"855425822\",\"gst\":\"845DFDFF\",\"vehicles\":1,\"status\":\"active\",\"id\":\"OWN-1786006555349\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T08:55:55.349Z\",\"updatedAt\":\"2026-08-06T08:55:55.349Z\"}",
+      "timestamp": "2026-08-06T08:55:55.359Z",
+      "createdAt": "2026-08-06T08:55:55.363Z",
+      "updatedAt": "2026-08-06T08:55:55.363Z"
+    },
+    {
+      "id": "LOG-1786006803659-2we1",
+      "company_id": "COMP-002",
+      "entity": "Owner",
+      "action": "CREATE",
+      "entityId": "OWN-1786006803344",
+      "payload": "{\"name\":\"ganesh\",\"contact\":\"ganesh\",\"mobile\":\"bawane \",\"gst\":\"8454555\",\"vehicles\":1,\"status\":\"active\",\"id\":\"OWN-1786006803344\",\"company_id\":\"COMP-002\",\"createdAt\":\"2026-08-06T09:00:03.344Z\",\"updatedAt\":\"2026-08-06T09:00:03.344Z\"}",
+      "timestamp": "2026-08-06T09:00:03.659Z",
+      "createdAt": "2026-08-06T09:00:03.659Z",
+      "updatedAt": "2026-08-06T09:00:03.659Z"
+    }
+  ]
+}
