@@ -1,0 +1,367 @@
+// TransportOS Prisma Schema for PostgreSQL 18
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Company {
+  id          String    @id
+  code        String
+  name        String
+  city        String?
+  logo        String?
+  schema_name String?   @map("schema_name")
+  status      String    @default("active")
+  lastLogin   DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  branches   Branch[]
+  users      User[]
+  parties    Party[]
+  vehicles   Vehicle[]
+  drivers    Driver[]
+  owners     Owner[]
+  agents     Agent[]
+  stations   Station[]
+  articles   Article[]
+  lrs        LR[]
+  deliveries Delivery[]
+  bills      Bill[]
+  payments   Payment[]
+
+  @@map("companies")
+}
+
+model Branch {
+  id         String   @id
+  company_id String
+  code       String
+  name       String
+  city       String
+  state      String
+  type       String   @default("Branch")
+  status     String   @default("active")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  company    Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("branches")
+}
+
+model User {
+  id                String    @id
+  company_id        String?
+  name              String
+  username          String?
+  email             String    @unique
+  password          String
+  role              String
+  assignedCompanies Json?
+  permissions       Json?
+  branch            String?
+  lastLogin         DateTime?
+  status            String    @default("active")
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  company           Company?  @relation(fields: [company_id], references: [id], onDelete: SetNull)
+
+  @@index([company_id])
+  @@map("users")
+}
+
+model Party {
+  id             String   @id
+  company_id     String
+  name           String
+  type           String
+  gst            String?
+  pan            String?
+  phone          String?
+  mobile         String?
+  email          String?
+  contactPerson  String?
+  creditLimit    String?
+  billingAddress String?
+  shippingAddress String?
+  paymentTerms   String?
+  city           String?
+  state          String?
+  pincode        String?
+  status         String   @default("active")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  company        Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("parties")
+}
+
+model Vehicle {
+  id         String   @id
+  company_id String
+  number     String
+  type       String
+  capacity   String?
+  driver     String?
+  owner      String?
+  gpsId      String?
+  rc         String?
+  insurance  String?
+  fitness    String?
+  permit     String?
+  puc        String?
+  status     String   @default("active")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  company    Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("vehicles")
+}
+
+model Driver {
+  id            String   @id
+  company_id    String
+  name          String
+  mobile        String?
+  altMobile     String?
+  license       String?
+  licenseExpiry String?
+  aadhaar       String?
+  address       String?
+  emergency     String?
+  vehicle       String?
+  experience    String?
+  status        String   @default("active")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  company       Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("drivers")
+}
+
+model Owner {
+  id         String   @id
+  company_id String
+  name       String
+  pan        String?
+  phone      String?
+  contact    String?
+  mobile     String?
+  email      String?
+  gst        String?
+  address    String?
+  type       String?
+  vehicles   Int?     @default(1)
+  status     String   @default("active")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  company    Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("owners")
+}
+
+model Agent {
+  id          String   @id
+  company_id  String
+  name        String
+  city        String?
+  state       String?
+  commission  String?
+  phone       String?
+  contact     String?
+  mobile      String?
+  email       String?
+  outstanding Float?   @default(0)
+  status      String   @default("active")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  company     Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("agents")
+}
+
+model Station {
+  id         String   @id
+  company_id String
+  name       String
+  city       String?
+  state      String?
+  type       String?
+  pincode    String?
+  phone      String?
+  status     String   @default("active")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  company    Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("stations")
+}
+
+model Article {
+  id          String   @id
+  company_id  String
+  name        String
+  packing     String?
+  hsn         String?
+  rate        String?
+  unit        String?
+  description String?
+  fragile     Boolean? @default(false)
+  status      String   @default("active")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  company     Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("articles")
+}
+
+model LR {
+  id                  String   @id
+  company_id          String
+  lrNo                String
+  date                String
+  bookingBranch       String?
+  bookingBranchId     String?
+  bookingStation      String?
+  deliveryStation     String?
+  consignor           String?
+  consignee           String?
+  from                String?
+  to                  String?
+  vehicle             String?
+  driver              String?
+  owner               String?
+  agent               String?
+  article             String?
+  packages            String?
+  packageCount        Int?
+  weight              String?
+  freight             Float?   @default(0)
+  freightType         String?
+  paymentType         String?
+  hamali              Float?   @default(0)
+  doorDeliveryCharges Float?   @default(0)
+  otherCharges        Float?   @default(0)
+  gst                 Float?   @default(0)
+  totalAmount         Float?   @default(0)
+  invoice             String?
+  invoiceValue        Float?   @default(0)
+  waybill             String?
+  ewayBill            String?
+  expectedDelivery    String?
+  status              String   @default("Booked")
+  items               Json?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  company             Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("lrs")
+}
+
+model Delivery {
+  id            String   @id
+  company_id    String
+  lrNo          String
+  lr_id         String?
+  date          String
+  deliveredTo   String?
+  receiverPhone String?
+  status        String   @default("Delivered")
+  remarks       String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  company       Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("deliveries")
+}
+
+model Bill {
+  id          String   @id
+  company_id  String
+  billNo      String
+  billDate    String
+  party       String
+  partyId     String?
+  amount      Float?   @default(0)
+  subtotal    Float?   @default(0)
+  tax         Float?   @default(0)
+  totalAmount Float?   @default(0)
+  paid        Float?   @default(0)
+  paidAmount  Float?   @default(0)
+  outstanding Float?   @default(0)
+  lrsCount    Int?     @default(0)
+  lrs         Json?
+  dueDate     String?
+  status      String   @default("pending")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  company     Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("bills")
+}
+
+model Payment {
+  id          String   @id
+  company_id  String
+  receiptNo   String
+  billNo      String
+  bill_id     String?
+  date        String
+  party       String
+  amount      Float    @default(0)
+  mode        String   @default("Cash")
+  referenceNo String?
+  status      String   @default("Completed")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  company     Company  @relation(fields: [company_id], references: [id], onDelete: Cascade)
+
+  @@index([company_id])
+  @@map("payments")
+}
+
+model AuditLog {
+  id         String   @id
+  company_id String?
+  user       String?
+  role       String?
+  action     String
+  entity     String?
+  recordId   String?
+  entityId   String?
+  url        String?
+  payload    String?
+  timestamp  DateTime @default(now())
+  ip         String?
+  createdAt  DateTime @default(now())
+
+  @@map("audit_logs")
+}
