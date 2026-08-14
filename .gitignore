@@ -19,7 +19,8 @@ dist-ssr
 .env.local
 
 # Local File Uploads Storage
-storage/
+/storage/
+!src/server/storage/
 
 # Editor / System
 .vscode/*
