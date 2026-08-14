@@ -1536,7 +1536,10 @@ if (fs.existsSync(DIST_DIR)) {
 // ---------------------------------------------------------------------------
 // Server Startup (Only when executed as standalone main entrypoint)
 // ---------------------------------------------------------------------------
-const isMainModule = Boolean(process.argv[1]?.includes("index.ts") || process.argv[1]?.includes("index.js") || process.env.STANDALONE === "true")
+const isMainModule = Boolean(
+  (process.argv[1]?.includes("index.ts") || process.argv[1]?.includes("index.js") || process.env.STANDALONE === "true") &&
+  !process.env.VERCEL
+)
 if (isMainModule && process.env.NODE_ENV !== "test") {
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`\n==================================================`)
