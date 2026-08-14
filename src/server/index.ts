@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }))
 // ---------------------------------------------------------------------------
 // 1. Health Endpoint
 // ---------------------------------------------------------------------------
-app.get("/health", (req: Request, res: Response) => {
+app.get(["/health", "/api/health"], (req: Request, res: Response) => {
   res.status(200).json({
     status: "ok",
     service: "TransportOS Production API",
@@ -945,7 +945,7 @@ app.get("/api/print/lr/:id", async (req: Request, res: Response) => {
 // ---------------------------------------------------------------------------
 // 5. Dynamic DB Endpoints (/api/db/*)
 // ---------------------------------------------------------------------------
-app.use("/api/db", async (req: Request, res: Response) => {
+app.use(["/api/db", "/db"], async (req: Request, res: Response) => {
   const parts = req.path.replace(/^\/+/, "").split("/").filter(Boolean)
   const collection = parts[0]
   const recordId = parts[1]
