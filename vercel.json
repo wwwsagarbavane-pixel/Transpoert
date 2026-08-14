@@ -1,13 +1,18 @@
 {
-  "functions": {
-    "api/index.ts": {
-      "includeFiles": "src/server/**",
-      "memory": 1024,
-      "maxDuration": 10
+  "builds": [
+    {
+      "src": "api/index.ts",
+      "use": "@vercel/node"
     }
-  },
-  "rewrites": [
-    { "source": "/health", "destination": "/api/index" },
-    { "source": "/api/(.*)", "destination": "/api/index" }
+  ],
+  "routes": [
+    {
+      "src": "/health",
+      "dest": "api/index.ts"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.ts"
+    }
   ]
 }
