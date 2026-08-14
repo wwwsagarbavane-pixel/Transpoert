@@ -5,9 +5,19 @@ import { DBAuditLog } from "./schema"
 export const dbQuery = {
   getAll: async <T>(storeName: string): Promise<T[]> => {
     try {
-      return await apiClient.get<T[]>(`/${storeName}`)
+      const res = await apiClient.get<T[]>(`/${storeName}`)
+      if (Array.isArray(res) && res.length > 0) return res
+      const direct = await fetch(`/api/db/${storeName}`).then(r => r.json()).catch(() => null)
+      if (direct && direct.data && Array.isArray(direct.data) && direct.data.length > 0) {
+        return direct.data as T[]
+      }
+      return (res || []) as T[]
     } catch (err) {
       console.error(`[REST API Error] getAll ${storeName}:`, err)
+      const direct = await fetch(`/api/db/${storeName}`).then(r => r.json()).catch(() => null)
+      if (direct && direct.data && Array.isArray(direct.data)) {
+        return direct.data as T[]
+      }
       return []
     }
   },
@@ -15,16 +25,29 @@ export const dbQuery = {
   getAllForCompany: async <T>(storeName: string, companyId?: string): Promise<T[]> => {
     try {
       const activeId = companyId || companyContext.getActiveCompanyId()
-      const data = await apiClient.get<T[]>(`/${storeName}`, { companyId: activeId })
-      if (activeId && storeName !== "companies") {
+      let data = await apiClient.get<T[]>(`/${storeName}`, { companyId: activeId })
+      if (!data || !Array.isArray(data) || data.length === 0) {
+        const directUrl = activeId ? `/api/db/${storeName}?companyId=${encodeURIComponent(activeId)}` : `/api/db/${storeName}`
+        const direct = await fetch(directUrl, { headers: activeId ? { 'X-Company-ID': activeId } : {} }).then(r => r.json()).catch(() => null)
+        if (direct && direct.data && Array.isArray(direct.data)) {
+          data = direct.data
+        }
+      }
+      if (activeId && storeName !== "companies" && Array.isArray(data)) {
         return data.filter((item: any) =>
           item.company_id === activeId ||
           (storeName === "users" && item.assignedCompanies && item.assignedCompanies.includes(activeId))
         )
       }
-      return data
+      return data || []
     } catch (err) {
       console.error(`[REST API Error] getAllForCompany ${storeName}:`, err)
+      const activeId = companyId || companyContext.getActiveCompanyId()
+      const directUrl = activeId ? `/api/db/${storeName}?companyId=${encodeURIComponent(activeId)}` : `/api/db/${storeName}`
+      const direct = await fetch(directUrl, { headers: activeId ? { 'X-Company-ID': activeId } : {} }).then(r => r.json()).catch(() => null)
+      if (direct && direct.data && Array.isArray(direct.data)) {
+        return direct.data as T[]
+      }
       return []
     }
   },
