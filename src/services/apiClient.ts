@@ -61,7 +61,7 @@ class ApiClient {
   private buildUrl(endpoint: string): string {
     const cleanEndpoint = endpoint.startsWith("/") ? endpoint : `/${endpoint}`
     if (cleanEndpoint.startsWith("/api")) {
-      return cleanEndpoint
+      return API_BASE ? `${API_BASE}${cleanEndpoint}` : cleanEndpoint
     }
     if (
       cleanEndpoint.startsWith("/auth") ||
